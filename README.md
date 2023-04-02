@@ -17,7 +17,7 @@ _**Note:** Setup scripts built and tested on Ubuntu 20_
 #### Prereqs: 
 
 1. Python3: `sudo apt install python3`
-2. pip3: ``sudo apt install python3-pip`
+2. pip3: `sudo apt install python3-pip`
 3. dev-tools: `apt install build-essential`)
 
 
