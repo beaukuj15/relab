@@ -26,12 +26,14 @@ _**Note:** Setup scripts built and tested on Ubuntu 20_
 1. Run install script for mitmproxy and genymotion emulator: `./install_all.sh`
 2. Create and start Android emulated device in Genymotion OR attach physical rooted test Android device over USB.
 3. Make sure test device is accessible over adb with root access: `adb shell` -> `su`
-4. Run script to copy mitmproxy cert to be system cert on device: `./make_root_ca.sh`
+4. Run script to copy mitmproxy cert to be system cert on device: `cd setup_scripts; ./make_root_ca.sh`  
 5. Install frida: `cd frida; ./install_frida.sh`
 6. Get frida-server binary then push to test Android device: `./get_frida_server.sh`
 7. Start frida-server on Android: `adb shell` -> `su` -> `/data/local/tmp/frida-server &`
 8. Verify frida is attaching to device over adb: `frida-ps -U`
- 
+
+
+_**Note:**_ May need to mount Android filesystem as writable after step 3: `adb shell; su; mount -o rw,remount /system`
 
 #### Capturing Live HTTPS from app
 
