@@ -48,7 +48,7 @@ _**Note:**_ May need to mount Android filesystem as writable after step 3: `adb 
 
 1. Make sure frida server is started on Android and verify connection: `frida-ps -U`
 2. Find name of app package to target with frida: `adb shell pm list packages`
-3. Bypass SSL for targeted app: `frida --codeshare akabe1/frida-multiple-unpinning -U -f <package_id> --no-pause`
+3. Bypass SSL for targeted app: `frida -l frida_scripts/multiple_unpinning.js -U -f <package_id> --no-pause`
 4. Trace files being opened by app on device: `frida-trace -U -i open -f <package_id>`
 
 
