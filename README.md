@@ -39,8 +39,8 @@ _**Note:**_ May need to mount Android filesystem as writable after step 3: `adb 
 
 1. Start mitmproxy on desktop: `cd mitmprox; ./mitmweb`
 2. Make sure test Android is connected to proxy: `Settings` -> `Network` -> `Wi-Fi` -> `Click then hold down connected network` -> `Modify network` -> `(click) Advanced options drop down` -> `Set Proxy to "Manual"` -> `hostname = IP of desktop` -> `proxy port = 8080`
-3. Visit any site in browser on Android to verify decryption
-4. View decrypted traffic in `mitmweb` browser on desktop at: `localhost:8081`
+3. View decrypted traffic panel in `mitmweb` browser on desktop at: `localhost:8081
+4. Visit any site in browser on Android to verify decryption is working
 
 
 
